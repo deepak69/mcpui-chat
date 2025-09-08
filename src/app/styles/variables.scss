@@ -1,0 +1,50 @@
+// Color Variables
+$primary-color: #0070f3;
+$secondary-color: #7928ca;
+$success-color: #0070f3;
+$error-color: #e00;
+$warning-color: #f5a623;
+
+// Background Colors
+$chat-bg: #f5f5f5;
+$canvas-bg: #ffffff;
+$message-user-bg: #0070f3;
+$message-ai-bg: #ffffff;
+$input-bg: #ffffff;
+
+// Text Colors
+$text-primary: #000000;
+$text-secondary: #666666;
+$text-muted: #999999;
+$text-white: #ffffff;
+
+// Border and Shadow
+$border-color: #e1e1e1;
+$border-radius: 12px;
+$border-radius-small: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Transitions
+$transition-duration: 0.5s;
+$transition-fast: 0.2s;
+$transition-slow: 0.7s;
+
+// Layout
+$chat-width-aside: 40%;
+$canvas-width: 60%;
+$header-height: 60px;
+$input-height: 50px;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;

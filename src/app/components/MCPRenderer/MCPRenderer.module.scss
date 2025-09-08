@@ -1,0 +1,498 @@
+@use 'sass:color';
+@import '../../styles/variables.scss';
+
+.mcpContainer {
+  width: 100%;
+  min-height: 100%;
+}
+
+.componentsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.component {
+  width: 100%;
+  background: $canvas-bg;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  border: 1px solid $border-color;
+}
+
+// Assessment Component Styles
+.assessmentContainer {
+  padding: $spacing-xl;
+}
+
+.assessmentTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+}
+
+.stagesList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.stageItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  background: #f8f9fa;
+  border-radius: $border-radius-small;
+  border-left: 4px solid $primary-color;
+}
+
+.stageNumber {
+  font-weight: 600;
+  color: $primary-color;
+  min-width: 20px;
+}
+
+.stageText {
+  color: $text-primary;
+  line-height: 1.5;
+}
+
+.dimensionsInfo {
+  text-align: center;
+  padding: $spacing-md;
+  background: #e8f4fd;
+  border-radius: $border-radius-small;
+  border: 1px solid #b3d9ff;
+  
+  p {
+    margin: 0;
+    color: $text-primary;
+    font-size: 14px;
+  }
+  
+  strong {
+    color: $primary-color;
+  }
+}
+
+// Form Component Styles
+.formContainer {
+  padding: $spacing-xl;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+.fieldInput {
+  padding: $spacing-md;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-small;
+  font-size: 14px;
+  transition: border-color $transition-fast;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+  }
+  
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+.submitButton {
+  padding: $spacing-md $spacing-lg;
+  background: $primary-color;
+  color: $text-white;
+  border: none;
+  border-radius: $border-radius-small;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: color.adjust($primary-color, $lightness: -10%);
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Dashboard Component Styles
+.dashboardContainer {
+  padding: $spacing-xl;
+}
+
+.dashboardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-lg;
+}
+
+.widget {
+  background: #f8f9fa;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.widgetHeader {
+  padding: $spacing-md;
+  background: $canvas-bg;
+  border-bottom: 1px solid $border-color;
+  
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-primary;
+    margin: 0;
+  }
+}
+
+.widgetContent {
+  padding: $spacing-md;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-md;
+}
+
+.statItem {
+  text-align: center;
+  padding: $spacing-md;
+  background: $canvas-bg;
+  border-radius: $border-radius-small;
+  border: 1px solid $border-color;
+}
+
+.statValue {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: $primary-color;
+  margin-bottom: $spacing-xs;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: $text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chartPlaceholder {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  height: 120px;
+  padding: $spacing-md;
+  background: $canvas-bg;
+  border-radius: $border-radius-small;
+}
+
+.chartBar {
+  width: 20px;
+  background: $primary-color;
+  border-radius: 2px 2px 0 0;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: color.adjust($primary-color, $lightness: -10%);
+  }
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm;
+  background: $canvas-bg;
+  border-radius: $border-radius-small;
+  border: 1px solid $border-color;
+}
+
+.activityText {
+  font-size: 14px;
+  color: $text-primary;
+}
+
+.activityTime {
+  font-size: 12px;
+  color: $text-muted;
+}
+
+// Card Component Styles
+.cardContainer {
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  padding: $spacing-xl;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.cardText {
+  font-size: 14px;
+  color: $text-secondary;
+  line-height: 1.6;
+  margin-bottom: $spacing-lg;
+}
+
+.cardActions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.cardButton {
+  padding: $spacing-sm $spacing-md;
+  background: $primary-color;
+  color: $text-white;
+  border: none;
+  border-radius: $border-radius-small;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: color.adjust($primary-color, $lightness: -10%);
+  }
+}
+
+.cardButtonSecondary {
+  padding: $spacing-sm $spacing-md;
+  background: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: $border-radius-small;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background: $primary-color;
+    color: $text-white;
+  }
+}
+
+// Table Component Styles
+.tableContainer {
+  padding: $spacing-xl;
+}
+
+.tableTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $canvas-bg;
+}
+
+.tableHeader {
+  background: #f8f9fa;
+  padding: $spacing-md;
+  text-align: left;
+  font-weight: 600;
+  color: $text-primary;
+  border-bottom: 1px solid $border-color;
+  font-size: 14px;
+}
+
+.tableRow {
+  border-bottom: 1px solid $border-color;
+  
+  &:hover {
+    background: #f8f9fa;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.tableCell {
+  padding: $spacing-md;
+  font-size: 14px;
+  color: $text-primary;
+}
+
+// Error Component Styles
+.errorComponent {
+  width: 100%;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: $border-radius;
+  padding: $spacing-xl;
+  text-align: center;
+}
+
+.errorMessage {
+  h4 {
+    color: #e53e3e;
+    font-size: 18px;
+    margin-bottom: $spacing-sm;
+  }
+  
+  p {
+    color: #c53030;
+    font-size: 14px;
+  }
+}
+
+// Empty State
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xxl;
+  text-align: center;
+  color: $text-secondary;
+  
+  .emptyIcon {
+    margin-bottom: $spacing-lg;
+    color: $text-muted;
+  }
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+// Responsive design
+@media (max-width: $tablet) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardActions {
+    flex-direction: column;
+  }
+  
+  .tableWrapper {
+    font-size: 12px;
+  }
+  
+  .tableHeader,
+  .tableCell {
+    padding: $spacing-sm;
+  }
+}
+
+@media (max-width: $mobile) {
+  .formContainer,
+  .dashboardContainer,
+  .cardContent,
+  .tableContainer {
+    padding: $spacing-md;
+  }
+  
+  .formTitle,
+  .dashboardTitle {
+    font-size: 20px;
+  }
+  
+  .cardTitle,
+  .tableTitle {
+    font-size: 18px;
+  }
+  
+  .chartPlaceholder {
+    height: 80px;
+  }
+  
+  .chartBar {
+    width: 15px;
+  }
+}
